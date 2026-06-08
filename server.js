@@ -393,7 +393,9 @@ io.on('connection', (socket) => {
 
   socket.on('join', (name) => {
     if (!players[name]) {
-      players[name] = { name, score: 0, clickedElements: [] };
+      players[name] = { name, score: 0, clickedElements: [], connected: true };
+    } else {
+      players[name].connected = true;
     }
     socket.playerName = name;
     console.log(`${name} joined.`);
@@ -402,6 +404,13 @@ io.on('connection', (socket) => {
 
   socket.on('start_round', () => {
     if (roundStatus === 'voting' || roundStatus === 'reveal') return;
+
+    // Remover jogadores que caíram antes de iniciar nova rodada
+    for (const name in players) {
+      if (players[name].connected === false) {
+        delete players[name];
+      }
+    }
 
     sessionInbox = [];
     pendingEmails = shuffleArray([...templates]); 
@@ -450,6 +459,10 @@ io.on('connection', (socket) => {
 
   socket.on('disconnect', () => {
     console.log('User disconnected:', socket.id);
+    if (socket.playerName && players[socket.playerName]) {
+      players[socket.playerName].connected = false;
+      broadcastState();
+    }
   });
 });
 
