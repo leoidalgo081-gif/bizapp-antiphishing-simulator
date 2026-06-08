@@ -392,7 +392,10 @@ io.on('connection', (socket) => {
   console.log('User connected:', socket.id);
 
   socket.on('join', (name) => {
-    players[socket.id] = { id: socket.id, name, score: 0, clickedElements: [] };
+    if (!players[name]) {
+      players[name] = { name, score: 0, clickedElements: [] };
+    }
+    socket.playerName = name;
     console.log(`${name} joined.`);
     broadcastState();
   });
@@ -407,7 +410,6 @@ io.on('connection', (socket) => {
     Object.values(players).forEach(p => {
       p.score = 0;
       p.clickedElements = [];
-      playerVotes[p.id] = {};
     });
     
     nextRound();
@@ -416,12 +418,12 @@ io.on('connection', (socket) => {
   socket.on('vote_email', ({ emailId, voteType }) => {
     if (roundStatus !== 'voting' || !currentTemplate || currentTemplate.id !== emailId) return;
     
-    if (!playerVotes[socket.id]) playerVotes[socket.id] = {};
-    if (playerVotes[socket.id][emailId]) return;
+    if (!playerVotes[socket.playerName]) playerVotes[socket.playerName] = {};
+    if (playerVotes[socket.playerName][emailId]) return;
 
-    playerVotes[socket.id][emailId] = voteType;
+    playerVotes[socket.playerName][emailId] = voteType;
     
-    const player = players[socket.id];
+    const player = players[socket.playerName];
     if (player) {
       io.emit('player_voted', { name: player.name, emailId });
     }
@@ -429,7 +431,7 @@ io.on('connection', (socket) => {
 
   socket.on('click_suspicious', ({ emailId, elementId }) => {
     if (roundStatus !== 'voting') return;
-    const player = players[socket.id];
+    const player = players[socket.playerName];
     if (!player) return;
 
     const template = templates.find(t => t.id === emailId);
@@ -447,8 +449,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('disconnect', () => {
-    delete players[socket.id];
-    broadcastState();
+    console.log('User disconnected:', socket.id);
   });
 });
 
