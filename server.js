@@ -464,6 +464,12 @@ io.on('connection', (socket) => {
       broadcastState();
     }
   });
+
+  socket.on('next_round_host', () => {
+    if (roundStatus === 'reveal') {
+      nextRound();
+    }
+  });
 });
 
 function nextRound() {
@@ -522,10 +528,6 @@ function revealRound() {
 
   broadcastState();
   io.emit('reveal_single_result', resultData);
-
-  setTimeout(() => {
-    nextRound();
-  }, 8000);
 }
 
 app.use(express.static('public'));
