@@ -355,6 +355,148 @@ const templates = [
     `,
     explanation: 'Comunicação interna 100% segura. O RH não exige senha, assinatura digital de senhas ou download imposto ou urgente nem envia nenhum link suspeito, apenas indica longamente o lugar que todos já conhecem (intranet oficial/Drive Z e a recepção) onde se acha a informação segura da política real.',
     suspiciousElements: []
+  },
+  {
+    id: 13,
+    type: 'phishing',
+    subject: 'URGENTE: Nova Multa de Trânsito (Veículo Corporativo) - CNH Suspensa',
+    fromName: 'Detran Digital / Frota',
+    fromEmail: 'infracoes@gov-br-multas-veiculos.com',
+    bodyHtml: `
+      <div style="font-family: 'Segoe UI', Tahoma, sans-serif; color: #202020; padding: 20px; border: 1px solid #ccc; line-height: 1.6;">
+        <div style="background-color: #00427a; color: white; padding: 15px; text-align: center; border-radius: 4px 4px 0 0;">
+          <h2 style="margin:0;">NOTIFICAÇÃO ELETRÔNICA DE AUTUAÇÃO (NEA)</h2>
+        </div>
+        <div style="padding: 20px; background: #fafafa;">
+          <p>Prezado(a) Condutor(a),</p>
+          <p>Registramos uma infração de trânsito <strong>GRAVÍSSIMA (Art. 165 - Embriaguez ao Volante)</strong> associada ao veículo corporativo registrado em sua responsabilidade temporária na última sexta-feira às 23h45.</p>
+          
+          <div style="background: #fff; border-left: 5px solid #d13438; padding: 15px; margin: 15px 0;">
+            <p>A penalidade administrativa (Multa de R$ 2.934,70) e a <span class="suspicious-target" data-id="typo_detran1" style="cursor:pointer; border-bottom: 1px dotted red;">suspenção deçe documento</span> entrarão em vigor automático caso não haja indicação do real infrator em 24 horas.</p>
+          </div>
+          
+          <p>O radar fotográfico capturou imagens em alta resolução do condutor. Para visualizar a foto, gerar o boleto com desconto ou <span class="suspicious-target" data-id="typo_detran2" style="cursor:pointer; border-bottom: 1px dotted red;">recorer judicialmente</span>, baixe o auto de infração anexo.</p>
+          
+          <div style="text-align: center; margin: 25px 0;">
+            <a href="#" class="suspicious-target" data-id="fake_link_detran" style="background-color: #d13438; color: white; padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block;">📸 VISUALIZAR FOTO DO RADAR E AUTO (.ZIP)</a>
+          </div>
+          <p style="font-size: 11px; color: #999;">Esta é uma mensagem automática. O não pagamento acarretará o envio do nome ao Serasa.</p>
+        </div>
+      </div>
+    `,
+    explanation: 'Engenharia social que ataca o medo de autoridades, multas pesadas e perda da CNH. Usa de uma suposta multa de embriaguez em carro corporativo para gerar desespero total e fazer a vítima baixar o ZIP infectado sem pensar.',
+    suspiciousElements: ['typo_detran1', 'typo_detran2', 'fake_link_detran']
+  },
+  {
+    id: 14,
+    type: 'phishing',
+    subject: 'Transferência Imediata - Solicitação Sigilosa (CEO)',
+    fromName: 'CEO / Diretoria Presidencial',
+    fromEmail: 'ceo.presidencia@nossa-empresa-executive.com',
+    bodyHtml: `
+      <div style="font-family: 'Segoe UI', Tahoma, sans-serif; color: #202020; padding: 20px; line-height: 1.6;">
+        <p>Preciso da sua ajuda imediata com máxima discrição.</p>
+        
+        <p>Estou em uma reunião a portas fechadas com potenciais investidores chineses visando uma fusão que não foi anunciada ao mercado ainda. Preciso que você <span class="suspicious-target" data-id="typo_ceo1" style="cursor:pointer; border-bottom: 1px dotted red;">realize o pagamentu</span> da taxa de retenção jurídica (Escrow) de R$ 14.500,00 <strong>agora mesmo</strong> para não perdermos a janela do negócio.</p>
+        
+        <p>Não ligue no meu ramal nem me mande mensagens pelo Teams, pois meu celular foi confiscado pelas regras de due diligence da reunião. Trate apenas respondendo a este e-mail.</p>
+        
+        <div style="background-color: #f8f9fa; border: 1px solid #ddd; padding: 15px; margin: 20px 0;">
+          <p><strong>DADOS BANCÁRIOS (Conta Jurídica Transitória):</strong><br/>
+          Favorecido: <span class="suspicious-target" data-id="fake_company_ceo" style="cursor:pointer; font-weight: bold;">Lawyers & Associados Ltda (Laranja)</span><br/>
+          PIX / CNPJ: 45.123.889/0001-99</p>
+        </div>
+        
+        <p>Lance o valor como "Consultoria Externa" e eu aprovo formalmente no sistema ERP no final do dia. <span class="suspicious-target" data-id="typo_ceo2" style="cursor:pointer; border-bottom: 1px dotted red;">Comfio na sua agilidadi.</span></p>
+        
+        <p>Me mande o comprovante assim que finalizar.</p>
+        <p>Abs,<br/>CEO</p>
+      </div>
+    `,
+    explanation: 'Ataque de "Whaling" (Fraude do CEO). Falsificação de identidade da alta diretoria pedindo pagamentos urgentes. Explora a intimidação hierárquica e obediência. O domínio do remetente é falso, pede sigilo (para ninguém confirmar a história) e contém erros ortográficos bizarros para um CEO.',
+    suspiciousElements: ['typo_ceo1', 'typo_ceo2', 'fake_company_ceo']
+  },
+  {
+    id: 15,
+    type: 'safe',
+    subject: 'Aviso de Indisponibilidade: Manutenção Programada do SAP (Sábado)',
+    fromName: 'Equipe de Infraestrutura de T.I.',
+    fromEmail: 'infra-ti@nossaempresa.com.br',
+    bodyHtml: `
+      <div style="font-family: 'Segoe UI', Tahoma, sans-serif; color: #202020; padding: 20px; line-height: 1.6;">
+        <h2 style="color: #0f6cbd;">Janela de Manutenção Programada - ERP SAP</h2>
+        
+        <p>Olá equipe,</p>
+        <p>Este é um aviso prévio para planejamento de suas atividades operacionais.</p>
+        
+        <p>No próximo <strong>sábado (14/11), das 23:00 até domingo (15/11) às 05:00</strong>, o servidor principal do SAP entrará em modo offline para aplicação de patches de segurança e expansão do banco de dados na nuvem.</p>
+        
+        <div style="background-color: #fff3cd; border: 1px solid #ffeeba; color: #856404; padding: 15px; border-radius: 4px; margin: 15px 0;">
+          <strong>Impacto Esperado:</strong> Durante este período, a emissão de notas fiscais, consultas de estoque e relatórios financeiros estarão 100% inoperantes. Sistemas não dependentes do SAP (como e-mail e Teams) funcionarão normalmente.
+        </div>
+        
+        <p>Nenhuma ação é requerida da sua parte. Não é necessário alterar senhas nem realizar downloads de clientes. Caso precise de suporte emergencial no domingo pela manhã, a equipe de plantão estará disponível no ramal 4040.</p>
+        
+        <p>Atenciosamente,<br/>Gestão de Mudanças - Infraestrutura T.I.</p>
+      </div>
+    `,
+    explanation: 'Aviso de TI 100% verdadeiro e profissional. Informa sobre indisponibilidade de sistema fora do horário comercial, não exige NENHUMA ação do usuário (não há links falsos, nem pedido de senhas) e apenas serve para comunicação e transparência.',
+    suspiciousElements: []
+  },
+  {
+    id: 16,
+    type: 'phishing',
+    subject: 'Acesso Restrito: Nova Política de Home Office Aprovada',
+    fromName: 'Gestão de Intranet RH',
+    fromEmail: 'portal-rh@portal-nossaempresa-login-sso.net',
+    bodyHtml: `
+      <div style="font-family: 'Segoe UI', Tahoma, sans-serif; color: #202020; padding: 20px; border: 1px solid #dcdcdc; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+        <div style="text-align: center; border-bottom: 2px solid #0f6cbd; padding-bottom: 15px; margin-bottom: 15px;">
+          <h2 style="margin: 0; color: #0f6cbd;">Portal do Colaborador SSO</h2>
+        </div>
+        
+        <p>Olá,</p>
+        <p>O Comitê Diretor aprovou a nova <strong>Política Flexível de Home Office 2025</strong>, que permite até 4 dias de trabalho remoto por semana, auxílio internet de R$ 300,00 e vale-cadeira ergonômica.</p>
+        
+        <p>Esta política é de <span class="suspicious-target" data-id="typo_home1" style="cursor:pointer; border-bottom: 1px dotted red;">adesão opcional</span> e possui cota limitada por departamento. Os 50 primeiros colaboradores que assinarem o termo eletrônico na Intranet garantirão as vagas do primeiro lote sem restrições.</p>
+        
+        <div style="background-color: #f9f9f9; padding: 20px; border: 1px solid #eee; text-align: center; margin: 25px 0; border-radius: 8px;">
+          <p style="margin-top: 0;">O documento está criptografado e foi hospedado no servidor externo por segurança. Para abrir e assinar, valide sua credencial corporativa abaixo:</p>
+          <a href="#" class="suspicious-target" data-id="fake_link_sso" style="background-color: #0f6cbd; color: white; padding: 12px 30px; text-decoration: none; border-radius: 20px; font-weight: bold; display: inline-block; margin-top: 10px;">🔐 ACESSAR DOCUMENTO VIA OFFICE 365</a>
+        </div>
+        
+        <p style="font-size: 12px; color: #777;">O link de login seguro expirará em 2 horas. Caso não <span class="suspicious-target" data-id="typo_home2" style="cursor:pointer; border-bottom: 1px dotted red;">prexa</span> o termo hoje, você será mantido no regime presencial integral.</p>
+      </div>
+    `,
+    explanation: 'Engenharia social que ataca o Desejo e o Senso de Urgência de Escassez ("50 primeiros"). A isca de benefícios incríveis de Home Office leva a vítima a um portal falso que imita a tela de login do Microsoft Office 365 para roubar credenciais de e-mail.',
+    suspiciousElements: ['typo_home1', 'typo_home2', 'fake_link_sso']
+  },
+  {
+    id: 17,
+    type: 'phishing',
+    subject: 'ALERTA DE SEGURANÇA: Token MFA Comprometido - Revalidação Necessária',
+    fromName: 'Suporte CyberSecurity',
+    fromEmail: 'auth-noreply@microsoft-authenticator-sync-services.com',
+    bodyHtml: `
+      <div style="font-family: 'Segoe UI', Tahoma, sans-serif; color: #202020; padding: 20px; line-height: 1.6;">
+        <h2 style="color: #c00000; display: flex; align-items: center; gap: 10px;">⚠️ Sincronização do Authenticator Falhou</h2>
+        
+        <p>Prezado usuário,</p>
+        
+        <p>O seu dispositivo móvel associado à autenticação de dois fatores (MFA) perdeu a sincronização criptográfica com nossos servidores principais. O seu token atual (Final 4492) foi <span class="suspicious-target" data-id="typo_mfa1" style="cursor:pointer; border-bottom: 1px dotted red;">compormetido</span> em um vazamento de banco de dados e foi invalidado.</p>
+        
+        <p>Você precisa parear seu smartphone novamente usando o QR Code mestre. Caso a revalidação não seja feita em até 4 horas úteis, todas as suas contas corporativas (E-mail, Teams, VPN e ERP) sofrerão Lock-Out automático e <span class="suspicious-target" data-id="typo_mfa2" style="cursor:pointer; border-bottom: 1px dotted red;">vce precizará</span> comparecer pessoalmente na matriz portando documento de identidade físico.</p>
+        
+        <div style="text-align: center; margin: 30px 0; background: #fafafa; border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
+          <p style="font-weight: bold; font-size: 16px; margin-top: 0;">Pareamento de Dispositivo MFA (V. 2.4)</p>
+          <a href="#" class="suspicious-target" data-id="fake_qr_link" style="background-color: #2b579a; color: white; padding: 15px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block;">📱 GERAR NOVO QR CODE DE PAREAMENTO</a>
+        </div>
+        
+        <p style="font-size: 11px; color: #666;">Nota confidencial. O time de TI não pode realizar este processo por você devido a leis de privacidade.</p>
+      </div>
+    `,
+    explanation: 'Phishing de "Falsa Segurança". É irônico, mas os hackers se disfarçam de sistemas de segurança (como o Microsoft Authenticator) para induzir pânico. O usuário tenta "se proteger" revalidando seu token, mas na verdade está fornecendo seu código MFA verdadeiro para a página clonada do criminoso em tempo real.',
+    suspiciousElements: ['typo_mfa1', 'typo_mfa2', 'fake_qr_link']
   }
 ];
 
