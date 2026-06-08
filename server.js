@@ -620,7 +620,7 @@ io.on('connection', (socket) => {
   socket.on('disconnect', () => {
     console.log('User disconnected:', socket.id);
     if (socket.playerName && players[socket.playerName]) {
-      players[socket.playerName].connected = false;
+      delete players[socket.playerName];
       broadcastState();
     }
   });
