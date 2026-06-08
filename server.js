@@ -509,7 +509,8 @@ let currentTemplate = null;
 let timerInterval = null;
 let timeLeft = 0;
 
-let playerVotes = {}; 
+let playerVotes = {};
+let sessionStats = {}; // { playerName: { correct, wrong, escalated, noVote } } 
 
 function broadcastState() {
   const sortedPlayers = Object.values(players).sort((a, b) => b.score - a.score);
@@ -518,7 +519,8 @@ function broadcastState() {
     players: sortedPlayers,
     timeLeft,
     inbox: sessionInbox,
-    currentEmailId: currentTemplate ? currentTemplate.id : null
+    currentEmailId: currentTemplate ? currentTemplate.id : null,
+    sessionStats: roundStatus === 'finished' ? sessionStats : undefined
   });
 }
 
@@ -557,6 +559,7 @@ io.on('connection', (socket) => {
     sessionInbox = [];
     pendingEmails = shuffleArray([...templates]); 
     playerVotes = {};
+    sessionStats = {};
     
     Object.values(players).forEach(p => {
       p.score = 0;
@@ -564,6 +567,21 @@ io.on('connection', (socket) => {
     });
     
     nextRound();
+  });
+
+  socket.on('reset_session', () => {
+    if (timerInterval) clearInterval(timerInterval);
+    roundStatus = 'lobby';
+    sessionInbox = [];
+    pendingEmails = [];
+    currentTemplate = null;
+    playerVotes = {};
+    sessionStats = {};
+    Object.values(players).forEach(p => {
+      p.score = 0;
+      p.clickedElements = [];
+    });
+    broadcastState();
   });
 
   socket.on('vote_email', ({ emailId, voteType }) => {
@@ -647,19 +665,37 @@ function nextRound() {
 function revealRound() {
   roundStatus = 'reveal';
   
-  for (const [socketId, votesMap] of Object.entries(playerVotes)) {
-    if (players[socketId]) {
-      const playerVote = votesMap[currentTemplate.id] || 'none'; 
+  for (const [playerName, votesMap] of Object.entries(playerVotes)) {
+    if (players[playerName]) {
+      const playerVote = votesMap[currentTemplate.id] || 'none';
+      
+      // Acumular stats
+      if (!sessionStats[playerName]) sessionStats[playerName] = { correct: 0, wrong: 0, escalated: 0, noVote: 0 };
       
       if (playerVote === 'escalate') {
-        players[socketId].score += 10;
+        players[playerName].score += 10;
+        sessionStats[playerName].escalated++;
       } else if (playerVote === currentTemplate.type) {
-        players[socketId].score += 50;
+        players[playerName].score += 50;
+        sessionStats[playerName].correct++;
       } else if (playerVote !== 'none') {
-        players[socketId].score -= 20;
+        players[playerName].score -= 20;
+        sessionStats[playerName].wrong++;
+      } else {
+        sessionStats[playerName].noVote++;
       }
     }
   }
+
+  // Para quem não votou nesta rodada
+  Object.keys(players).forEach(playerName => {
+    if (!playerVotes[playerName] || !playerVotes[playerName][currentTemplate.id]) {
+      if (!sessionStats[playerName]) sessionStats[playerName] = { correct: 0, wrong: 0, escalated: 0, noVote: 0 };
+      if (!playerVotes[playerName]?.[currentTemplate.id]) {
+        sessionStats[playerName].noVote++;
+      }
+    }
+  });
 
   const resultData = {
     id: currentTemplate.id,
