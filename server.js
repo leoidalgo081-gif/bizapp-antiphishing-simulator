@@ -532,6 +532,19 @@ function shuffleArray(array) {
   return array;
 }
 
+function prepareBalancedEmails(allTemplates) {
+  const phishing = shuffleArray(allTemplates.filter(t => t.type === 'phishing'));
+  const safe = shuffleArray(allTemplates.filter(t => t.type === 'safe'));
+  
+  const result = [];
+  while (phishing.length > 0 || safe.length > 0) {
+    if (phishing.length > 0) result.push(phishing.shift());
+    if (safe.length > 0) result.push(safe.shift());
+    if (phishing.length > 0 && Math.random() > 0.3) result.push(phishing.shift());
+  }
+  return result;
+}
+
 io.on('connection', (socket) => {
   console.log('User connected:', socket.id);
 
@@ -557,7 +570,7 @@ io.on('connection', (socket) => {
     }
 
     sessionInbox = [];
-    pendingEmails = shuffleArray([...templates]); 
+    pendingEmails = prepareBalancedEmails([...templates]); 
     playerVotes = {};
     sessionStats = {};
     
