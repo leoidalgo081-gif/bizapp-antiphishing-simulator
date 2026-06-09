@@ -126,10 +126,16 @@ const templates = [
         </table>
 
         <p>Este valor será creditado diretamente em sua conta corrente até a próxima sexta-feira às 17h00. Divergências devem ser contestadas via <a href="#" class="suspicious-target" data-id="safe_link_servicedesk" style="color: #0f6cbd;">Portal Service Desk</a>.</p>
+
+        <div style="margin-top: 20px; background: #f0f7ff; border: 1px solid #cce0ff; border-radius: 6px; padding: 15px; text-align: center;">
+          <p style="margin: 0 0 10px 0; font-size: 13px; color: #444;">Para acompanhar o status do depósito em tempo real, acesse o espelho bancário completo:</p>
+          <a href="#" class="suspicious-target" data-id="safe_bank_mirror" style="background-color: #2c3e50; color: white; padding: 10px 22px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block; font-size: 13px;">📄 Acessar Comprovante TED/PIX - RD-99381-V2</a>
+          <p style="margin: 10px 0 0 0; font-size: 11px; color: #888;">Autenticação via SSO corporativo. Nenhum dado extra será solicitado.</p>
+        </div>
       </div>
     `,
-    explanation: 'E-mail 100% legítimo do sistema financeiro contendo tabela rica de informações, sem forçar clique para senhas nem anexos suspeitos.',
-    suspiciousElements: [] // it has a safe link that does nothing negative
+    explanation: 'E-mail 100% legítimo do sistema financeiro. A tabela de reembolso é real, o remetente é o domínio oficial da empresa e o botão de "Comprovante TED" faz parte do fluxo normal do ERP — não pede senha adicional nem redireciona para fora do ambiente corporativo.',
+    suspiciousElements: []
   },
   {
     id: 5,
@@ -293,10 +299,18 @@ const templates = [
         
         <p>Para ler as regras e ativar seus vouchers, <a href="#" class="suspicious-target" data-id="safe_link_benefits" style="color: #0f6cbd; font-weight: 600;">acesse diretamente a aba "Benefícios e Saúde" pelo seu portal central na intranet</a> usando as mesmas credenciais do dia-a-dia.</p>
         
+        <div style="margin: 25px 0; border: 1px solid #ffe082; background: #fffde7; border-radius: 8px; padding: 15px;">
+          <p style="margin: 0 0 12px 0; font-size: 13px;"><strong>⏰ Atenção:</strong> Os vouchers de terapia do mês expiram no dia 30. Ative agora para não perder as 4 sessões gratuitas!</p>
+          <div style="text-align: center;">
+            <a href="#" class="suspicious-target" data-id="safe_vittude_link" style="background-color: #f9a825; color: #333; padding: 10px 22px; text-decoration: none; border-radius: 20px; font-weight: bold; display: inline-block; font-size: 13px;">🎟️ ATIVAR MEU VOUCHER VITTUDE AGORA</a>
+          </div>
+          <p style="font-size: 11px; color: #888; text-align: center; margin: 10px 0 0 0;">Você será redirecionado ao parceiro Vittude via SSO. Nenhum dado de cartão é solicitado.</p>
+        </div>
+
         <p>Contem permanentemente com a nossa total discrição para qualquer tema particular.</p>
       </div>
     `,
-    explanation: 'Boletim interno genuíno longo e muito agradável de se ler. Aborda lindamente um tema real de saúde mental corporativa, o tom de voz é absurdamente afetuoso e seguro, e não tenta em nenhum parágrafo induzir o funcionário a fornecer cliques sob pressão desesperada. Ele apenas os orienta calmamente a usar o caminho padronizado da intranet para ativar os vouchers legais da empresa.',
+    explanation: 'Boletim legítimo do Comitê de Bem-Estar. O remetente é o domínio oficial da empresa e o botão amarelo de "Ativar Voucher Vittude" é um fluxo real de parceiro de benefícios corporativos — o aviso de prazo é verdadeiro e faz parte da política de RH, não é criação de pânico artificial.',
     suspiciousElements: []
   },
   {
@@ -348,12 +362,19 @@ const templates = [
         
         <p>Todas as horas excedentes entrarão diretamente no nosso novo sistema de Banco de Horas automático da Ahgora System, eliminando chamados manuais na chefia para solicitar meios expedientes compensatórios.</p>
         
-        <p>O manual didático contendo regras, deveres e eventuais penalidades por quebra do acordo do banco de horas estará disponível ainda no dia de hoje em caráter público impresso na recepção e em arquivo PDF publicado na raiz criptografada da nossa rede da intranet local corporativa.</p>
-        
+        <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 6px; padding: 15px; margin: 20px 0;">
+          <p style="margin: 0 0 10px 0; font-size: 13px;">O manual completo com todas as regras, penalidades e o novo modelo de termo de adesão digital está disponível abaixo. <strong>Assine eletronicamente até sexta-feira</strong> para garantir sua adesão no primeiro lote:</p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="#" class="suspicious-target" data-id="safe_manual_pdf" style="background: #0f6cbd; color: white; padding: 9px 18px; text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: bold; display: inline-block;">📥 Baixar Manual_Flex_2025.pdf</a>
+            <a href="#" class="suspicious-target" data-id="safe_termo_sign" style="background: #107c10; color: white; padding: 9px 18px; text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: bold; display: inline-block;">✍️ Assinar Termo Eletrônico</a>
+          </div>
+          <p style="font-size: 11px; color: #999; margin: 10px 0 0 0;">Documentos hospedados na intranet corporativa (\\fileserver\\dp\\flex2025). Acesso via credenciais de rede.</p>
+        </div>
+
         <p>Qualquer dúvida, o departamento de DP permanece com as portas abertas na sala 104.</p>
       </div>
     `,
-    explanation: 'Comunicação interna 100% segura. O RH não exige senha, assinatura digital de senhas ou download imposto ou urgente nem envia nenhum link suspeito, apenas indica longamente o lugar que todos já conhecem (intranet oficial/Drive Z e a recepção) onde se acha a informação segura da política real.',
+    explanation: 'Comunicação 100% interna e segura do DP. O PDF e o botão de assinatura eletrônica fazem parte do fluxo oficial de adesão a políticas de RH — o servidor de arquivo indicado no rodapé (fileserver\\dp) é o caminho de rede padrão da empresa, não um domínio externo estranho.',
     suspiciousElements: []
   },
   {
