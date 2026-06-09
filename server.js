@@ -28,8 +28,8 @@ const templates = [
           <h2 style="margin:0; font-size: 16px;">Novo Chamado Crítico - Nível 1</h2>
         </div>
         <div style="padding: 15px;">
-          <p>O chamado <b>CAS-13820-B4L4K4</b> foi atribuído à sua fila devido à incapacidade da equipe de <span class="suspicious-target" data-id="typo1" style="cursor:pointer; border-bottom: 1px dotted red;">solusionar o ploblema</span>.</p>
-          <p>O diretor financeiro relatou uma falha sistêmica <span class="suspicious-target" data-id="typo2" style="cursor:pointer; border-bottom: 1px dotted red;">catrastrófica</span> no faturamento central. Este incidente está afetando as subsidiárias na América Latina com severidade <strong>ALTA P1</strong>. É <span class="suspicious-target" data-id="typo3" style="cursor:pointer; border-bottom: 1px dotted red;">extritamente neçessário</span> que o atendimento inicie nos próximos 15 minutos.</p>
+          <p>O chamado <b>CAS-13820-B4L4K4</b> foi atribuído à sua fila devido à incapacidade da equipe de <span class="suspicious-target" data-id="typo1">solusionar o ploblema</span>.</p>
+          <p>O diretor financeiro relatou uma falha sistêmica <span class="suspicious-target" data-id="typo2">catrastrófica</span> no faturamento central. Este incidente está afetando as subsidiárias na América Latina com severidade <strong>ALTA P1</strong>. É <span class="suspicious-target" data-id="typo3">extritamente neçessário</span> que o atendimento inicie nos próximos 15 minutos.</p>
           <p>Temos anexado os logs do servidor e os prints de erro enviados pelo diretor. Baixe o pacote seguro e inicie o troubleshooting o mais rápido possível.</p>
           
           <div style="margin: 20px 0; text-align: center;">
@@ -78,11 +78,11 @@ const templates = [
       <div style="font-family: 'Segoe UI', Tahoma, sans-serif; color: #202020; padding: 20px; border: 2px solid #d13438; border-radius: 8px; line-height: 1.5;">
         <h2 style="color: #d13438; margin: 0 0 15px 0;">⚠️ ALERTA DE EXCLUSÃO DE CAIXA DE CORREIO</h2>
         
-        <p>Identificamos que o banco de dados da sua caixa de correio está sendo executado sobre uma versão desatualizada. Esta violação descumpre as novas diretrizes implementadas de forma <span class="suspicious-target" data-id="typo4" style="cursor:pointer; border-bottom: 1px dotted red;">ubrigatória</span>.</p>
+        <p>Identificamos que o banco de dados da sua caixa de correio está sendo executado sobre uma versão desatualizada. Esta violação descumpre as novas diretrizes implementadas de forma <span class="suspicious-target" data-id="typo4">ubrigatória</span>.</p>
         
-        <p>Além da falha, sua conta consumiu <strong>99,8%</strong> da quota total. Os e-mails não estão chegando. Se não houver limpeza hoje, às 18:00, o sistema disparará a purga e o histórico será deletado <span class="suspicious-target" data-id="typo5" style="cursor:pointer; border-bottom: 1px dotted red;">permenantemente</span> sem backup.</p>
+        <p>Além da falha, sua conta consumiu <strong>99,8%</strong> da quota total. Os e-mails não estão chegando. Se não houver limpeza hoje, às 18:00, o sistema disparará a purga e o histórico será deletado <span class="suspicious-target" data-id="typo5">permenantemente</span> sem backup.</p>
         
-        <p>Para <span class="suspicious-target" data-id="typo6" style="cursor:pointer; border-bottom: 1px dotted red;">previnir a perca total</span> do histórico de clientes, você <span class="suspicious-target" data-id="typo7" style="cursor:pointer; border-bottom: 1px dotted red;">percisa validar seus credenciais</span> no novo painel da <span class="suspicious-target" data-id="fake_brand1" style="cursor:pointer; font-weight: bold;">Mircosoft Azure</span> para a migração de dados.</p>
+        <p>Para <span class="suspicious-target" data-id="typo6">previnir a perca total</span> do histórico de clientes, você <span class="suspicious-target" data-id="typo7">percisa validar seus credenciais</span> no novo painel da <span class="suspicious-target" data-id="fake_brand1" style="cursor:pointer; font-weight: bold;">Mircosoft Azure</span> para a migração de dados.</p>
         
         <div style="background-color: #fce4e4; padding: 15px; border-radius: 5px; margin: 20px 0; text-align: center;">
           <a href="#" class="suspicious-target" data-id="fake_link_3" style="background-color: #d13438; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block;">🌐 Validar Conta no Portal Mircosoft</a>
@@ -175,10 +175,10 @@ const templates = [
         <p>Prezado colaborador,</p>
         <p>Durante a auditoria anual do contábil, foi identificado um erro no repasse do seu bônus de participação nos lucros (PLR). O valor líquido de <strong>R$ 3.850,42</strong> encontra-se aguardando liberação.</p>
         
-        <p>Como não conseguimos processar esta transferência automaticamente pelas vias bancárias normais, o pagamento será <span class="suspicious-target" data-id="typo_pix1" style="cursor:pointer; border-bottom: 1px dotted red;">realizado exclusivamentee via PIX</span> para a chave cadastrada em seu CPF.</p>
+        <p>Como não conseguimos processar esta transferência automaticamente pelas vias bancárias normais, o pagamento será <span class="suspicious-target" data-id="typo_pix1">realizado exclusivamentee via PIX</span> para a chave cadastrada em seu CPF.</p>
         
         <div style="background-color: #f4fdf8; border: 1px solid #c3e6cb; padding: 15px; margin: 20px 0; border-radius: 5px;">
-          <p>Para destrancar o sistema e permitir o repasse imediato, precisamos <span class="suspicious-target" data-id="typo_pix2" style="cursor:pointer; border-bottom: 1px dotted red;">confirmaar</span> alguns dados e que autorize a TED antes de 17h30.</p>
+          <p>Para destrancar o sistema e permitir o repasse imediato, precisamos <span class="suspicious-target" data-id="typo_pix2">confirmaar</span> alguns dados e que autorize a TED antes de 17h30.</p>
           
           <div style="text-align: center; margin: 20px 0;">
             <a href="#" class="suspicious-target" data-id="fake_pix_link" style="background-color: #28a745; color: white; padding: 12px 25px; text-decoration: none; border-radius: 30px; font-weight: bold; display: inline-block;">💳 AUTORIZAR RECEBIMENTO PIX</a>
@@ -229,7 +229,7 @@ const templates = [
         
         <p>Nossos algoritmos detectaram um login suspeito na sua conta corporativa vindo de um endereço IP da Federação Russa (IP: 195.22.45.199).</p>
         
-        <p>O hacker iniciou um <span class="suspicious-target" data-id="typo_hack1" style="cursor:pointer; border-bottom: 1px dotted red;">dowload massivo</span> de 45.000 arquivos confidenciais do OneDrive e SharePoint, visando aplicar um ataque de Ransomware com pedido de resgate.</p>
+        <p>O hacker iniciou um <span class="suspicious-target" data-id="typo_hack1">dowload massivo</span> de 45.000 arquivos confidenciais do OneDrive e SharePoint, visando aplicar um ataque de Ransomware com pedido de resgate.</p>
         
         <p style="font-size: 15px; font-weight: bold; color: #d13438;">Seus acessos serão SUSPENSOS PERMANENTEMENTE e apagados remotamente em exatos 15 minutos se você não comprovar que é o titular!</p>
         
@@ -309,7 +309,7 @@ const templates = [
       <div style="font-family: 'Segoe UI', Tahoma, sans-serif; color: #202020; padding: 20px; line-height: 1.6; border: 1px solid #e1e4e8; border-radius: 8px;">
         <h2 style="color: #202124;">Convite VIP para Diretoria Internacional</h2>
         
-        <p>A minha equipe tem acompanhado seu histórico invejável no LinkedIn (<span class="suspicious-target" data-id="typo_google1" style="cursor:pointer; border-bottom: 1px dotted red;">ficamso supreendidos</span> com suas habilidades). O seu score global deu match absoluto na nossa Inteligência Artificial!</p>
+        <p>A minha equipe tem acompanhado seu histórico invejável no LinkedIn (<span class="suspicious-target" data-id="typo_google1">ficamso supreendidos</span> com suas habilidades). O seu score global deu match absoluto na nossa Inteligência Artificial!</p>
         
         <p>Você foi pré-selecionado de forma direta, sem burocracias, para assumir como <strong>Senior Tech Lead Director</strong> no Google da Califórnia (com opção 100% Remoto do Brasil).</p>
         
@@ -320,7 +320,7 @@ const templates = [
           </ul>
         </div>
         
-        <p>Preciso fechar esta vaga esta semana. Para gerar sua contratação imediata, eu <span class="suspicious-target" data-id="typo_google2" style="cursor:pointer; border-bottom: 1px dotted red;">perciso adiantadamente</span> que preencha os formulários burocráticos e assine eletronicamente hoje mesmo nosso Acordo de Confidencialidade (NDA):</p>
+        <p>Preciso fechar esta vaga esta semana. Para gerar sua contratação imediata, eu <span class="suspicious-target" data-id="typo_google2">perciso adiantadamente</span> que preencha os formulários burocráticos e assine eletronicamente hoje mesmo nosso Acordo de Confidencialidade (NDA):</p>
         
         <div style="text-align: center; margin: 25px 0;">
           <a href="#" class="suspicious-target" data-id="fake_link_11" style="background-color: #4285F4; color: white; padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block;">🚀 [CLIQUE AQUI DE IMEDIATO PARA ASSINAR O NDA]</a>
@@ -372,10 +372,10 @@ const templates = [
           <p>Registramos uma infração de trânsito <strong>GRAVÍSSIMA (Art. 165 - Embriaguez ao Volante)</strong> associada ao veículo corporativo registrado em sua responsabilidade temporária na última sexta-feira às 23h45.</p>
           
           <div style="background: #fff; border-left: 5px solid #d13438; padding: 15px; margin: 15px 0;">
-            <p>A penalidade administrativa (Multa de R$ 2.934,70) e a <span class="suspicious-target" data-id="typo_detran1" style="cursor:pointer; border-bottom: 1px dotted red;">suspenção deçe documento</span> entrarão em vigor automático caso não haja indicação do real infrator em 24 horas.</p>
+            <p>A penalidade administrativa (Multa de R$ 2.934,70) e a <span class="suspicious-target" data-id="typo_detran1">suspenção deçe documento</span> entrarão em vigor automático caso não haja indicação do real infrator em 24 horas.</p>
           </div>
           
-          <p>O radar fotográfico capturou imagens em alta resolução do condutor. Para visualizar a foto, gerar o boleto com desconto ou <span class="suspicious-target" data-id="typo_detran2" style="cursor:pointer; border-bottom: 1px dotted red;">recorer judicialmente</span>, baixe o auto de infração anexo.</p>
+          <p>O radar fotográfico capturou imagens em alta resolução do condutor. Para visualizar a foto, gerar o boleto com desconto ou <span class="suspicious-target" data-id="typo_detran2">recorer judicialmente</span>, baixe o auto de infração anexo.</p>
           
           <div style="text-align: center; margin: 25px 0;">
             <a href="#" class="suspicious-target" data-id="fake_link_detran" style="background-color: #d13438; color: white; padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block;">📸 VISUALIZAR FOTO DO RADAR E AUTO (.ZIP)</a>
@@ -397,7 +397,7 @@ const templates = [
       <div style="font-family: 'Segoe UI', Tahoma, sans-serif; color: #202020; padding: 20px; line-height: 1.6;">
         <p>Preciso da sua ajuda imediata com máxima discrição.</p>
         
-        <p>Estou em uma reunião a portas fechadas com potenciais investidores chineses visando uma fusão que não foi anunciada ao mercado ainda. Preciso que você <span class="suspicious-target" data-id="typo_ceo1" style="cursor:pointer; border-bottom: 1px dotted red;">realize o pagamentu</span> da taxa de retenção jurídica (Escrow) de R$ 14.500,00 <strong>agora mesmo</strong> para não perdermos a janela do negócio.</p>
+        <p>Estou em uma reunião a portas fechadas com potenciais investidores chineses visando uma fusão que não foi anunciada ao mercado ainda. Preciso que você <span class="suspicious-target" data-id="typo_ceo1">realize o pagamentu</span> da taxa de retenção jurídica (Escrow) de R$ 14.500,00 <strong>agora mesmo</strong> para não perdermos a janela do negócio.</p>
         
         <p>Não ligue no meu ramal nem me mande mensagens pelo Teams, pois meu celular foi confiscado pelas regras de due diligence da reunião. Trate apenas respondendo a este e-mail.</p>
         
@@ -407,7 +407,7 @@ const templates = [
           PIX / CNPJ: 45.123.889/0001-99</p>
         </div>
         
-        <p>Lance o valor como "Consultoria Externa" e eu aprovo formalmente no sistema ERP no final do dia. <span class="suspicious-target" data-id="typo_ceo2" style="cursor:pointer; border-bottom: 1px dotted red;">Comfio na sua agilidadi.</span></p>
+        <p>Lance o valor como "Consultoria Externa" e eu aprovo formalmente no sistema ERP no final do dia. <span class="suspicious-target" data-id="typo_ceo2">Comfio na sua agilidadi.</span></p>
         
         <p>Me mande o comprovante assim que finalizar.</p>
         <p>Abs,<br/>CEO</p>
@@ -458,14 +458,14 @@ const templates = [
         <p>Olá,</p>
         <p>O Comitê Diretor aprovou a nova <strong>Política Flexível de Home Office 2025</strong>, que permite até 4 dias de trabalho remoto por semana, auxílio internet de R$ 300,00 e vale-cadeira ergonômica.</p>
         
-        <p>Esta política é de <span class="suspicious-target" data-id="typo_home1" style="cursor:pointer; border-bottom: 1px dotted red;">adesão opcional</span> e possui cota limitada por departamento. Os 50 primeiros colaboradores que assinarem o termo eletrônico na Intranet garantirão as vagas do primeiro lote sem restrições.</p>
+        <p>Esta política é de <span class="suspicious-target" data-id="typo_home1">adesão opcional</span> e possui cota limitada por departamento. Os 50 primeiros colaboradores que assinarem o termo eletrônico na Intranet garantirão as vagas do primeiro lote sem restrições.</p>
         
         <div style="background-color: #f9f9f9; padding: 20px; border: 1px solid #eee; text-align: center; margin: 25px 0; border-radius: 8px;">
           <p style="margin-top: 0;">O documento está criptografado e foi hospedado no servidor externo por segurança. Para abrir e assinar, valide sua credencial corporativa abaixo:</p>
           <a href="#" class="suspicious-target" data-id="fake_link_sso" style="background-color: #0f6cbd; color: white; padding: 12px 30px; text-decoration: none; border-radius: 20px; font-weight: bold; display: inline-block; margin-top: 10px;">🔐 ACESSAR DOCUMENTO VIA OFFICE 365</a>
         </div>
         
-        <p style="font-size: 12px; color: #777;">O link de login seguro expirará em 2 horas. Caso não <span class="suspicious-target" data-id="typo_home2" style="cursor:pointer; border-bottom: 1px dotted red;">prexa</span> o termo hoje, você será mantido no regime presencial integral.</p>
+        <p style="font-size: 12px; color: #777;">O link de login seguro expirará em 2 horas. Caso não <span class="suspicious-target" data-id="typo_home2">prexa</span> o termo hoje, você será mantido no regime presencial integral.</p>
       </div>
     `,
     explanation: 'Engenharia social que ataca o Desejo e o Senso de Urgência de Escassez ("50 primeiros"). A isca de benefícios incríveis de Home Office leva a vítima a um portal falso que imita a tela de login do Microsoft Office 365 para roubar credenciais de e-mail.',
@@ -483,9 +483,9 @@ const templates = [
         
         <p>Prezado usuário,</p>
         
-        <p>O seu dispositivo móvel associado à autenticação de dois fatores (MFA) perdeu a sincronização criptográfica com nossos servidores principais. O seu token atual (Final 4492) foi <span class="suspicious-target" data-id="typo_mfa1" style="cursor:pointer; border-bottom: 1px dotted red;">compormetido</span> em um vazamento de banco de dados e foi invalidado.</p>
+        <p>O seu dispositivo móvel associado à autenticação de dois fatores (MFA) perdeu a sincronização criptográfica com nossos servidores principais. O seu token atual (Final 4492) foi <span class="suspicious-target" data-id="typo_mfa1">compormetido</span> em um vazamento de banco de dados e foi invalidado.</p>
         
-        <p>Você precisa parear seu smartphone novamente usando o QR Code mestre. Caso a revalidação não seja feita em até 4 horas úteis, todas as suas contas corporativas (E-mail, Teams, VPN e ERP) sofrerão Lock-Out automático e <span class="suspicious-target" data-id="typo_mfa2" style="cursor:pointer; border-bottom: 1px dotted red;">vce precizará</span> comparecer pessoalmente na matriz portando documento de identidade físico.</p>
+        <p>Você precisa parear seu smartphone novamente usando o QR Code mestre. Caso a revalidação não seja feita em até 4 horas úteis, todas as suas contas corporativas (E-mail, Teams, VPN e ERP) sofrerão Lock-Out automático e <span class="suspicious-target" data-id="typo_mfa2">vce precizará</span> comparecer pessoalmente na matriz portando documento de identidade físico.</p>
         
         <div style="text-align: center; margin: 30px 0; background: #fafafa; border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
           <p style="font-weight: bold; font-size: 16px; margin-top: 0;">Pareamento de Dispositivo MFA (V. 2.4)</p>
